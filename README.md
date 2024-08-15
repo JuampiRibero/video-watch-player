@@ -88,6 +88,10 @@ npm run dev
 
   <img src="public/images/dislikeVideo.png" alt="Captura de pantalla mostrando el POST a 'http://localhost:3000/api/trpc/dislikeVideo' en Postman" title="Imagen POST URL" />
 
+## Aclaraciones
+
+Cabe destacar que los datos están siendo almacenados en la memoria del servidor, por ende se perderán cuando el servidor se reinie.
+
 ### Autor
 
 Juan Pablo Ribero Mazzoni

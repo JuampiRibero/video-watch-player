@@ -38,11 +38,6 @@ const Navbar: FC = () => {
     },
     {
       id: 3,
-      title: isEnglish ? "DOCUMENTATION" : "DOCUMENTACION",
-      href: "/documentation",
-    },
-    {
-      id: 4,
       title: isEnglish ? "CONTACT" : "CONTACTO",
       href: "/contact",
     },

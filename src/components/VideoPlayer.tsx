@@ -201,6 +201,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
                     onClick={() => {
                       handleSubscribe();
                     }}
+                    className="hidden md:flex"
                   >
                     {isEnglish ? "Subscribe" : "Suscribirse"}
                   </Button>
