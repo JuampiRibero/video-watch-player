@@ -2,6 +2,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import VideoListSkeleton from "@/components/VideoListSkeleton";
 import VideoPlayerSkeleton from "@/components/VideoPlayerSkeleton";
 
+// Loading page component to show skeletons while data is being fetched
 export default function LoadingPage() {
   return (
     <main className="grid md:grid-cols-[3fr_1fr] gap-6 p-6">

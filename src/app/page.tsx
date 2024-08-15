@@ -3,24 +3,25 @@
 import { useEffect, useState } from "react";
 import { trpc } from "./_trpc/client";
 import useLanguage from "@/hooks/useLanguage";
-import toast from "react-hot-toast";
 import VideoPlayer from "@/components/VideoPlayer";
 import VideoList from "@/components/VideoList";
 import VideoPlayerSkeleton from "@/components/VideoPlayerSkeleton";
 import VideoListSkeleton from "@/components/VideoListSkeleton";
 import { Skeleton } from "@/components/ui/skeleton";
 
+// Page component for displaying the video player and video list
 export default function HomePage() {
   const [selectedVideoUrl, setSelectedVideoUrl] = useState<string | undefined>(
     undefined
   );
   const [selectedVideoId, setSelectedVideoId] = useState<string>("1");
   const [isLoadingVideo, setIsLoadingVideo] = useState<boolean>(false);
-
   const { isEnglish } = useLanguage();
 
+  // Fetch video data using TRPC query
   const { data: videos, isLoading } = trpc.getVideos.useQuery();
 
+  // Handler for selecting a video
   const handleVideoSelect = (url: string, id: string) => {
     setIsLoadingVideo(true);
     setSelectedVideoUrl(url);

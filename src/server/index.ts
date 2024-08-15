@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { publicProcedure, router } from "./trpc";
 
+// Sample data for videos
 let videosData = [
   {
     id: "1",
@@ -130,6 +131,7 @@ let videosData = [
   },
 ];
 
+// Define the appRouter for handling queries and mutations
 export const appRouter = router({
   getVideos: publicProcedure.query(async () => {
     return videosData;
