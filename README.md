@@ -6,11 +6,11 @@ Aplicación web, realizada como parte de una prueba técnica, que une en un repr
 
 ## Tecnologías Utilizadas
 
-- Next.js [Documentación de Next.js](https://nextjs.org/docs){:target="_blank"}
-- Tailwind CSS [Documentación de Tailwind CSS](https://tailwindcss.com/docs/installation){:target="_blank"}
-- Shadcn [Documentación de Shadcn](https://ui.shadcn.com/docs){:target="_blank"}
-- tRPC [Documentación de tRPC](https://trpc.io/docs/quickstart){:target="_blank"}
-- TypeScript [Documentación de TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html){:target="_blank"}
+- Next.js <a href="https://nextjs.org/docs" target="_blank">Documentación de Next.js</a>
+- Tailwind CSS <a href="https://tailwindcss.com/docs/installation" target="_blank">Documentación de Tailwind CSS</a>
+- Shadcn <a href="https://ui.shadcn.com/docs" target="_blank">Documentación de Shadcn</a>
+- tRPC <a href="https://trpc.io/docs/quickstart" target="_blank">Documentación de tRPC</a>
+- TypeScript <a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html" target="_blank">Documentación de TypeScript</a>
 
 ## Otras Librerías Utilizadas
 
@@ -44,7 +44,7 @@ npm install
 npm run dev
 ```
 
-5. Abre [http://localhost:3000](http://localhost:3000){:target="_blank"} con tu navegador.
+5. Abre <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> con tu navegador.
 
 ## API Endpoints
 
