@@ -1,36 +1,148 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Reproductor de Videos
 
-## Getting Started
+## Introducción
 
-First, run the development server:
+Aplicación web, realizada como parte de una prueba técnica, que une en un reproductor de vídeos las siguientes tecnologías: Next.js, Tailwind CSS, Shadcn y tRPC. Los usuarios pueden reproducir cualquier video individualmente, viendo una lista de todos ellos, contabilizando sus vistas, likes y dislikes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tecnologías Utilizadas
+
+- **Next.js** [Documentación de Next.js](https://nextjs.org/docs)
+- **Tailwind CSS** [Documentación de Tailwind CSS](https://tailwindcss.com/docs/installation)
+- **Shadcn** [Documentación de Shadcn](https://ui.shadcn.com/docs)
+- **tRPC** [Documentación de tRPC](https://trpc.io/docs/quickstart)
+- **TypeScript** [Documentación de TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+
+## Otras Librerías Utilizadas
+
+- **Lucide Icons**
+- **React Hot Toast**
+- **React Icons**
+
+## Estructura del Proyecto
+
+video-watch-player/
+│
+├── public/
+│ ├── gif/
+│ │ └── under-construction.gif
+│ │
+│ ├── images/
+│ │ ├── dislikeVideo.png
+│ │ ├── getVideos.png
+│ │ ├── incrementWatchCount.png
+│ │ └── likeVideo.png
+│ │
+│ ├── next.svg
+│ └── vercel.svg
+│
+├── src/
+│ │
+│ ├── app/
+│ │ │
+│ │ ├── _trpc/
+│ │ │ ├── client.ts
+│ │ │ ├── Provider.tsx
+│ │ │ └── serverClient.ts
+│ │ │
+│ │ ├── about/
+│ │ │ └── page.tsx
+│ │ │
+│ │ ├── api/
+│ │ │ └── trpc
+│ │ │ └── [trpc]
+│ │ │ └── route.ts
+│ │ │
+│ │ ├── contact/
+│ │ │ └── page.tsx
+│ │ │
+│ │ ├── favicon.ico
+│ │ ├── globals.css
+│ │ ├── layout.tsx
+│ │ └── page.tsx
+│ │
+│ ├── components/
+│ │ ├── ui/
+│ │ │ ├── avatar.tsx
+│ │ │ ├── button.tsx
+│ │ │ ├── navigation-menu.tsx
+│ │ │ ├── select.tsx
+│ │ │ ├── sheet.tsx
+│ │ │ └── skeleton.tsx
+│ │ │
+│ │ ├── Footer.tsx
+│ │ ├── LanguageSelector.tsx
+│ │ ├── Navbar.tsx
+│ │ ├── Topbar.tsx
+│ │ ├── UnderConstruction.tsx
+│ │ ├── VideoList.tsx
+│ │ ├── VideoListSkeleton.tsx
+│ │ ├── VideoPlayer.tsx
+│ │ └── VideoPlayerSkeleton.tsx
+│ │
+│ ├── context/
+│ │ └── LanguageContext.tsx
+│ │
+│ ├── lib/
+│ │ └── utils.ts
+│ │
+│ ├── server/
+│ │ ├── index.ts
+│ │ └── trpc.ts
+│ │
+│ └── context/
+│ ├── LanguageContext.tsx
+│ └── ThemeContext.tsx
+│
+├── .eslintrc.json
+├── .gitignore
+├── components.json
+├── next.config.msj
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── README.md
+├── tailwind.config.ts
+└── tsconfig.json
+
+## Instrucciones para Instalación
+
+1. Clona el repositorio:
+
+```
+git clone https://github.com/JuampiRibero/video-watch-player.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Accede a la raíz del del proyecto:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+cd video-watch-player
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. Instala todas las dependencias:
 
-## Learn More
+```
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+3. Corre el servidor de desarrollo:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. Abre [http://localhost:3000](http://localhost:3000) con tu navegador.
 
-## Deploy on Vercel
+## API Endpoints
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- GET /api/trpc/getVideos → Recupera lista de videos con todos los datos.
+  <img src="public/images/getVideos.png" alt="Captura de pantalla mostrando el GET a 'http://localhost:3000/api/trpc/getVideos' en Postman" title="Imagen GET URL" />
+- POST /api/trpc/incrementWatchCount → Incrementa el contador de vistas de un video.
+  <img src="public/images/incrementWatchCount.png" alt="Captura de pantalla mostrando el POST a 'http://localhost:3000/api/trpc/incrementWatchCount' en Postman" title="Imagen POST URL" />
+- POST /api/trpc/likeVideo → Incrementa el contador de likes de un video.
+  <img src="public/images/likeVideo.png" alt="Captura de pantalla mostrando el POST a 'http://localhost:3000/api/trpc/likeVideo' en Postman" title="Imagen POST URL" />
+- POST /api/trpc/dislikeVideo → Incrementa el contador de dislikes de un video.
+  <img src="public/images/dislikeVideo.png" alt="Captura de pantalla mostrando el POST a 'http://localhost:3000/api/trpc/dislikeVideo' en Postman" title="Imagen POST URL" />
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Autor
+
+Juan Pablo Ribero Mazzoni
