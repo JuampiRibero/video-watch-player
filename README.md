@@ -2,7 +2,7 @@
 
 ## Introducción
 
-Aplicación web, realizada como parte de una prueba técnica, que une en un reproductor de vídeos las siguientes tecnologías: Next.js, Tailwind CSS, Shadcn y tRPC. Los usuarios pueden reproducir cualquier video individualmente, viendo una lista de todos ellos, contabilizando sus vistas, likes y dislikes.
+Aplicación web que une en un reproductor de vídeos las siguientes tecnologías: Next.js, Tailwind CSS, Shadcn y tRPC. Los usuarios pueden reproducir cualquier video individualmente, viendo una lista de todos ellos, contabilizando sus vistas, likes y dislikes.
 
 ## Tecnologías Utilizadas
 
